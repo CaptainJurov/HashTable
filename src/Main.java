@@ -7,7 +7,7 @@ public class Main {
         Database db = new Database();
         db.insert(1, "Miku Hatsune", 3192007);
         db.insert(401, "Teto Kasane", 4012008);
-//        db.removeUser(401);
+        db.removeUser(401);
         db.insert(2, "Kagamine Rin", 27122007);
         db.insert(3, "Kagamine Len", 27122007);
         db.insert(4, "Megurine Luka", 30012009);
