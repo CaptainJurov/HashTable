@@ -35,13 +35,15 @@ public class LinkedList<K, V> {
                 return;
             }
             Node<K, V> current = head;
-            if (!current.next.key.equals(key)) {
-                while (current.next!=null&&!current.next.key.equals(key)) {
-                    current = current.next;
-                }
-            }
             if (current.next != null) {
-                current.next = current.next.next;
+                if (!current.next.key.equals(key)) {
+                    while (current.next != null && !current.next.key.equals(key)) {
+                        current = current.next;
+                    }
+                }
+                if (current.next!=null) {
+                    current.next = current.next.next;
+                }
             }
         }
     }
