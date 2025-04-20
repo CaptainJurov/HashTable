@@ -18,7 +18,13 @@ public class Url implements Hashable {
         return hash;
     }
 
-    public boolean equals (Url obj) {
-        return url.equals(obj.url);
+    @Override
+    public String toString () {
+        return url;
+    }
+
+    @Override
+    public boolean equals (Object obj) {
+        return url.equals(obj.toString());
     }
 }
