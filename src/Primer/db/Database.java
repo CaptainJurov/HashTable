@@ -18,9 +18,4 @@ public class Database extends HashMap<Id, User>{
     public void removeUser(int id) {
         super.remove(new Id(id));
     }
-    public void showInfo() {
-        for (LinkedList<Id, User> i : table) {
-
-        }
-    }
 }
