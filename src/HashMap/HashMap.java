@@ -1,6 +1,6 @@
 package HashMap;
 
-public class HashMap<K extends Hashable, V> {
+public class HashMap<K, V> {
     protected LinkedList<K, V>[] table;
     private final int size;
     public HashMap (int size) {
@@ -29,7 +29,7 @@ public class HashMap<K extends Hashable, V> {
         }
     }
     private int getHash(K key) {
-        return key.getHash()%size;
+        return key.hashCode()%size;
     }
 
     @Override

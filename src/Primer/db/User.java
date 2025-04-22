@@ -1,7 +1,5 @@
 package Primer.db;
 
-import HashMap.Hashable;
-
 public class User {
     private final String name;
     private final int phone;

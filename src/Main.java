@@ -31,7 +31,7 @@ public class Main {
         System.out.println("\n\033[1;33mПримерчик с флудом");
         Database db1 = new Database();
         for (int i=0;i<100;i++) {
-            db1.insert(getRandNum(), "Z", 1);
+            db1.insert(getRandNum(), "Z", getRandNum());
         }
         for (int i=0;i<10;i++) {
             db1.removeUser(i);

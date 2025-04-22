@@ -1,8 +1,6 @@
 package Primer.something;
 
-import HashMap.Hashable;
-
-public class Url implements Hashable {
+public class Url {
     String url;
 
     Url (String url) {
@@ -10,7 +8,7 @@ public class Url implements Hashable {
     }
 
     @Override
-    public int getHash () {
+    public int hashCode () {
         int hash = 0;
         for (int i = 0; i < url.length(); i++) {
             hash += url.charAt(i);

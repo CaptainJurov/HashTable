@@ -1,12 +1,10 @@
 package Primer.db;
 
-import HashMap.Hashable;
-
-public class Id implements Hashable {
+public class Id {
     public final int id;
     public Id (int id) {this.id = id;}
     @Override
-    public int getHash () {
+    public int hashCode () {
         return id;
     }
 
