@@ -3,7 +3,7 @@ package Primer.db;
 import HashTable.*;
 
 
-public class Database extends ClosedHashMap<Id, User> {
+public class Database extends ChainHashMap<Id, User> {
     public Database () {
         super(16);
     }

@@ -1,9 +1,9 @@
 package Primer.something;
 
-import HashTable.ClosedHashMap;
+import HashTable.ChainHashMap;
 
 
-public class Rediska extends ClosedHashMap<Url, Cache> {
+public class Rediska extends ChainHashMap<Url, Cache> {
     public Rediska () {
         super(16);
     }

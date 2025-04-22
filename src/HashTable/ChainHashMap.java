@@ -1,10 +1,10 @@
 package HashTable;
 
-public class ClosedHashMap<K, V> implements HashTable<K, V> {
+public class ChainHashMap<K, V> implements HashTable<K, V> {
     protected LinkedList<K, V>[] table;
     private final int size;
 
-    public ClosedHashMap (int size) {
+    public ChainHashMap (int size) {
         this.size = size;
         table = new LinkedList[size];
         for (int i = 0; i < size; i++) {
@@ -56,4 +56,3 @@ public class ClosedHashMap<K, V> implements HashTable<K, V> {
         return result;
     }
 }
-
