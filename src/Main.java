@@ -1,3 +1,4 @@
+import HashTable.HashTable;
 import Primer.db.Database;
 import Primer.something.Rediska;
 

@@ -1,4 +1,4 @@
-package HashMap;
+package HashTable;
 
 public class LinkedList<K, V> {
     private Node<K, V> head;
@@ -41,7 +41,7 @@ public class LinkedList<K, V> {
                         current = current.next;
                     }
                 }
-                if (current.next!=null) {
+                if (current.next != null) {
                     current.next = current.next.next;
                 }
             }
