@@ -3,9 +3,12 @@ import Primer.db.Database;
 import Primer.something.Rediska;
 
 public class Main {
-    public static int getRandNum() {return (int) ((Math.random()*1000)%1000);}
+    public static int getRandNum () {
+        return (int) ((Math.random() * 1000) % 1000);
+    }
+
     public static void main (String[] args) {
-        System.out.println("\033[1;32mПримерчик с бд");
+
         Database db = new Database();
         db.insert(1, "Miku Hatsune", 3192007);
         db.insert(401, "Teto Kasane", 4012008);
@@ -16,6 +19,8 @@ public class Main {
         db.insert(7, "GUMI", 26062009);
 
         db.removeUser(401);
+//        System.out.println(db.getUser(401));
+        System.out.println("\033[1;32mПримерчик с бд");
         System.out.println(db);
         System.out.println("\n\033[1;31mПримерчик с импортозамещением Redis");
 
@@ -31,10 +36,10 @@ public class Main {
 
         System.out.println("\n\033[1;33mПримерчик с флудом");
         Database db1 = new Database();
-        for (int i=0;i<100;i++) {
+        for (int i = 0; i < 100; i++) {
             db1.insert(getRandNum(), "Z", getRandNum());
         }
-        for (int i=0;i<10;i++) {
+        for (int i = 0; i < 10; i++) {
             db1.removeUser(i);
         }
         System.out.println(db1);

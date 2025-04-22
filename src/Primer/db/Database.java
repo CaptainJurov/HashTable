@@ -7,7 +7,6 @@ public class Database extends ClosedHashMap<Id, User> {
     public Database () {
         super(16);
     }
-
     public void insert (int id, String name, int phone) {
         Id num = new Id(id);
         User user = new User(name, phone);
