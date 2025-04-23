@@ -3,7 +3,7 @@ package HashTable.OpenAdress;
 import HashTable.HashTable;
 import HashTable.HashFunction;
 public class ClosedHashMap<K, V> implements HashTable<K, V> {
-    private Pair<K, V>[] table;
+    protected Pair<K, V>[] table;
     private final HashFunction<K> hf;
     public ClosedHashMap(int size, HashFunction<K> hf) {
         this.table = new Pair[size];
@@ -61,9 +61,10 @@ public class ClosedHashMap<K, V> implements HashTable<K, V> {
     public String toString() {
         String result = "";
         for (int i = 0; i < table.length; i++) {
-            result+="\n["+i+"] - ";
-            result+=(table[i] != null && !table[i].isdel ? table[i].value : "");
+//            result+="\n["+i+"] - ";
+            result+=(table[i] != null && !table[i].isdel ? (table[i].key+"->"+table[i].value)+"\n" : "");
         }
         return result;
     }
+    protected int getSize() {return table.length;}
 }
