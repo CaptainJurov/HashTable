@@ -36,7 +36,7 @@ public class ChainHashMap<K, V> implements HashTable<K, V> {
     }
 
     private int getHash (K key) {
-        return (int) (Math.pow(key.hashCode(), 2) % size);
+        return (int) (Math.abs(key.hashCode()) % size);
     }
 
     @Override
