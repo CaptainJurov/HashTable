@@ -44,7 +44,7 @@ public class Main {
         }
         System.out.println(db1);
         db1.getUser(getRandNum());
-        Reader r = new Reader(71);
+        Reader r = new Reader(256);
         r.read("input.txt");
         r.write("output.txt");
         System.out.println(r);

@@ -61,8 +61,7 @@ public class ClosedHashMap<K, V> implements HashTable<K, V> {
     public String toString() {
         String result = "";
         for (int i = 0; i < table.length; i++) {
-//            result+="\n["+i+"] - ";
-            result+=(table[i] != null && !table[i].isdel ? (table[i].key+"->"+table[i].value)+"\n" : "");
+            result+=(table[i] != null && !table[i].isdel ? (table[i].key+" "+table[i].value)+"\n" : "");
         }
         return result;
     }
