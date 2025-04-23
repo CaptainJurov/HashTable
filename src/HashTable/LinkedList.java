@@ -28,23 +28,18 @@ public class LinkedList<K, V> {
         return null;
     }
 
-    public void remove (K key) {
-        if (head != null) {
-            if (head.key.equals(key)) {
-                head = head.next;
-                return;
-            }
-            Node<K, V> current = head;
-            if (current.next != null) {
-                if (!current.next.key.equals(key)) {
-                    while (current.next != null && !current.next.key.equals(key)) {
-                        current = current.next;
-                    }
-                }
-                if (current.next != null) {
-                    current.next = current.next.next;
-                }
-            }
+    public void remove(K key) {
+        if (head == null) return;
+        if (head.key.equals(key)) {
+            head = head.next;
+            return;
+        }
+        Node<K, V> current = head;
+        while (current.next != null && !current.next.key.equals(key)) {
+            current = current.next;
+        }
+        if (current.next != null) {
+            current.next = current.next.next;
         }
     }
 
