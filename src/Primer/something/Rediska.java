@@ -1,12 +1,12 @@
 package Primer.something;
 
-import HashTable.Chain.ChainHashMap;
+import HashTable.HashFunctions.DivRem;
 import HashTable.OpenAdress.ClosedHashMap;
 
 
 public class Rediska extends ClosedHashMap<Url, Cache> {
     public Rediska () {
-        super(16);
+        super(16, new DivRem<Url>());
     }
     public void insert(String address, String cache) {
         Url url = new Url(address);

@@ -1,11 +1,12 @@
 package Primer.db;
 
 import HashTable.Chain.ChainHashMap;
+import HashTable.HashFunctions.DivRem;
 
 
 public class Database extends ChainHashMap<Id, User> {
     public Database () {
-        super(16);
+        super(16, new DivRem<>());
     }
     public void insert (int id, String name, int phone) {
         Id num = new Id(id);

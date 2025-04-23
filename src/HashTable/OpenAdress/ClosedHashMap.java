@@ -1,12 +1,13 @@
 package HashTable.OpenAdress;
 
 import HashTable.HashTable;
-
+import HashTable.HashFunction;
 public class ClosedHashMap<K, V> implements HashTable<K, V> {
     private Pair<K, V>[] table;
-
-    public ClosedHashMap(int size) {
+    private final HashFunction<K> hf;
+    public ClosedHashMap(int size, HashFunction<K> hf) {
         this.table = new Pair[size];
+        this.hf = hf;
     }
 
     private int hash(K key) {

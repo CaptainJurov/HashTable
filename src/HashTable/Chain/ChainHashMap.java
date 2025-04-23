@@ -1,13 +1,15 @@
 package HashTable.Chain;
 
+import HashTable.HashFunction;
 import HashTable.HashTable;
 
 public class ChainHashMap<K, V> implements HashTable<K, V> {
     protected LinkedList<K, V>[] table;
     private int size;
-
-    public ChainHashMap (int size) {
+    private HashFunction<K> hf;
+    public ChainHashMap (int size, HashFunction<K> hf) {
         this.size = size;
+        this.hf = hf;
         table = new LinkedList[size];
         for (int i = 0; i < size; i++) {
             table[i] = new LinkedList<K, V>();
@@ -36,7 +38,7 @@ public class ChainHashMap<K, V> implements HashTable<K, V> {
     }
 
     private int getHash (K key) {
-        return (int) (Math.abs(key.hashCode()) % size);
+        return (int) (hf.hash(key) % size);
     }
 
     @Override
