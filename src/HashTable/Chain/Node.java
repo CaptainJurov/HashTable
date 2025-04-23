@@ -1,4 +1,4 @@
-package HashTable;
+package HashTable.Chain;
 
 class Node<K, V> {
     K key;

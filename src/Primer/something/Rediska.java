@@ -1,6 +1,6 @@
 package Primer.something;
 
-import HashTable.ChainHashMap;
+import HashTable.Chain.ChainHashMap;
 
 
 public class Rediska extends ChainHashMap<Url, Cache> {

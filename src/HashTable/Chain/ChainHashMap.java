@@ -1,8 +1,10 @@
-package HashTable;
+package HashTable.Chain;
+
+import HashTable.HashTable;
 
 public class ChainHashMap<K, V> implements HashTable<K, V> {
     protected LinkedList<K, V>[] table;
-    private final int size;
+    private int size;
 
     public ChainHashMap (int size) {
         this.size = size;
@@ -34,7 +36,7 @@ public class ChainHashMap<K, V> implements HashTable<K, V> {
     }
 
     private int getHash (K key) {
-        return key.hashCode() % size;
+        return (int) (Math.pow(key.hashCode(), 2) % size);
     }
 
     @Override

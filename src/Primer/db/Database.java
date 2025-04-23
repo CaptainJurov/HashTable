@@ -1,6 +1,6 @@
 package Primer.db;
 
-import HashTable.*;
+import HashTable.Chain.ChainHashMap;
 
 
 public class Database extends ChainHashMap<Id, User> {
