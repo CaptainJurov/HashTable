@@ -11,7 +11,7 @@ public class ClosedHashMap<K, V> implements HashTable<K, V> {
     }
 
     private int hash(K key) {
-        return (key.hashCode() & 0x7FFFFFFF) % table.length;
+        return (key.hashCode()) % table.length;
     }
 
     private int getIndex(K key, int attempt) {
